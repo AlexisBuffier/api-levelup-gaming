@@ -1,6 +1,5 @@
 const jwt = require('jsonwebtoken');
-const envFile = process.env.NODE_ENV === 'production' ? '.env.production' : '.env';
-require('dotenv').config({ path: envFile });
+require('dotenv').config();
 
 
 const authMiddleware = (req, res, next) => {
