@@ -20,20 +20,9 @@ const Product = sequelize.define('Product', {
   },
   image: {
     type: DataTypes.STRING,
-  },
-  createdAt: {
-    type: DataTypes.DATE,
-    allowNull: false,
-    defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
-  },
-  updatedAt: {
-    type: DataTypes.DATE,
-    allowNull: false,
-    defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
   }
 }, {
   tableName: 'products',
-  timestamps: false
 });
 
 // Relation avec Category

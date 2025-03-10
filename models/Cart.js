@@ -6,20 +6,9 @@ const Cart = sequelize.define('Cart', {
   date_created: {
     type: DataTypes.DATE,
     defaultValue: DataTypes.NOW,
-  },
-  createdAt: {
-    type: DataTypes.DATE,
-    allowNull: false,
-    defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
-  },
-  updatedAt: {
-    type: DataTypes.DATE,
-    allowNull: false,
-    defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
   }
 }, {
   tableName: 'carts',
-  timestamps: false
 });
 
 // Relation avec User
