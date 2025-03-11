@@ -22,6 +22,10 @@ const Cart = sequelize.define('Cart', {
   timestamps: false
 });
 
+Cart.beforeUpdate((cart, options) => {
+  cart.updatedAt = new Date();
+});
+
 // Relation avec User
 User.hasOne(Cart, { foreignKey: 'user_id' });
 Cart.belongsTo(User, { foreignKey: 'user_id' });

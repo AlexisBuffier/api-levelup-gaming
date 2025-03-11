@@ -36,6 +36,10 @@ const Product = sequelize.define('Product', {
   timestamps: false
 });
 
+Product.beforeUpdate((product, options) => {
+  product.updatedAt = new Date();
+});
+
 // Relation avec Category
 Category.hasMany(Product, { foreignKey: 'category_id' });
 Product.belongsTo(Category, { foreignKey: 'category_id' });

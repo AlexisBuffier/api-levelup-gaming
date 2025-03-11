@@ -23,6 +23,10 @@ const CartItem = sequelize.define('CartItem', {
   timestamps: false
 });
 
+CartItem.beforeUpdate((cartitem, options) => {
+  cartitem.updatedAt = new Date();
+});
+
 // Relation avec Cart
 Cart.hasMany(CartItem, { foreignKey: 'cart_id' });
 CartItem.belongsTo(Cart, { foreignKey: 'cart_id' });

@@ -21,4 +21,8 @@ const Category = sequelize.define('Category', {
   timestamps: false
 });
 
+Category.beforeUpdate((category, options) => {
+  category.updatedAt = new Date();
+});
+
 module.exports = Category;
