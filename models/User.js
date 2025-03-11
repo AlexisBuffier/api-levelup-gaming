@@ -14,9 +14,20 @@ const User = sequelize.define('User', {
   pwd: {
     type: DataTypes.STRING,
     allowNull: false,
+  },
+  createdAt: {
+    type: DataTypes.DATE,
+    allowNull: false,
+    defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+  },
+  updatedAt: {
+    type: DataTypes.DATE,
+    allowNull: false,
+    defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
   }
 }, {
   tableName: 'users',
+  timestamps: false
 });
 
 module.exports = User;
