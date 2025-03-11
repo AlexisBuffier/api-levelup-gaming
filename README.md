@@ -93,7 +93,7 @@ This repository hosts the backend API for the LevelUp Gaming platform. The API p
    Authorization: Bearer <your_jwt_token>
    ```
 
---
+---
 
 ## API Endpoints
 
