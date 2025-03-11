@@ -11,9 +11,6 @@ A secure and scalable RESTful API for the LevelUp Gaming e-commerce platform, bu
 - [Installation](#installation)
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
